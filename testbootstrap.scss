@@ -1,0 +1,20 @@
+$icon-font-path: '../bootstrap/assets/fonts/bootstrap/';
+
+@function font-path($path) {
+  @return $path;
+}
+
+$watermelon: #FF4626;
+$light-red: #FFA08F;
+$green: #00B266;
+$light-light-red: #FFC9BF;
+$navbar-default-bg: $watermelon;
+$navbar-default-brand-color: white;
+$navbar-default-link-color: white;
+$navbar-margin-bottom: 0px;
+$navbar-default-toggle-icon-bar-bg: white;
+$btn-primary-bg: $green;
+$jumbotron-bg: #E7FFF5;
+
+@import "bootstrap/assets/stylesheets/bootstrap.scss";
+@import "mysass.scss";
