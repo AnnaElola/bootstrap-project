@@ -252,8 +252,8 @@ th {
     border: 1px solid #ddd !important; } }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url(twbs-font-path("../Test.bootstrap/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.eot"));
-  src: url(twbs-font-path("../Test.bootstrap/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix")) format("embedded-opentype"), url(twbs-font-path("../Test.bootstrap/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2")) format("woff2"), url(twbs-font-path("../Test.bootstrap/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.woff")) format("woff"), url(twbs-font-path("../Test.bootstrap/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf")) format("truetype"), url(twbs-font-path("../Test.bootstrap/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular")) format("svg"); }
+  src: url("../Test.bootstrap/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.eot");
+  src: url("../Test.bootstrap/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../Test.bootstrap/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("../Test.bootstrap/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../Test.bootstrap/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../Test.bootstrap/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
 .glyphicon {
   position: relative;
   top: 1px;
@@ -5806,59 +5806,40 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  background-color: #FF775E; }
+/* Todo media queries */
+/*iPhone 5, 5s*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  /* Carousel base class */
+  .carousel {
+    height: 218px;
+    width: 290px;
+    margin-bottom: 60px; }
 
-#pfooter {
-  color: #403330; }
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    z-index: 10; }
 
-.flex {
-  display: flex;
-  height: 100%;
-  flex-wrap: wrap; }
+  /* Declare heights because of positioning of img element */
+  .carousel .item {
+    height: 218px;
+    width: 290px;
+    background-color: white; }
 
-.container .text-muted {
-  margin: 20px 0; }
+  .carousel-inner > .item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: auto; }
 
-.my-spacer {
-  height: 50px; }
+  .carousel-caption h1 {
+    font-size: 20px; }
 
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px; }
-
-html {
-  position: relative;
-  min-height: 100%; }
-
-/* Carousel base class */
-.carousel {
-  height: 500px;
-  width: 667px;
-  margin-bottom: 60px; }
-
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  z-index: 10; }
-
-/* Declare heights because of positioning of img element */
-.carousel .item {
-  height: 500px;
-  width: 667px;
-  background-color: white; }
-
-.carousel-inner > .item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 500px; }
-
-@media only screen and (max-width: 568px) {
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 11px;
+    line-height: 1; } }
+/* iPhone 7, 7plus */
+@media only screen and (min-device-width: 375px) and (max-device-width: 736px) {
   /* Carousel base class */
   .carousel {
     height: 241px;
@@ -5888,8 +5869,82 @@ html {
     margin-bottom: 20px;
     font-size: 11px;
     line-height: 1; } }
-/* Todo media queries */
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+#pfooter {
+  color: #403330; }
+
+.green {
+  background-color: #E7FFF5; }
+
+#circlePicture {
+  height: 200px;
+  width: auto;
+  margin-top: 40px; }
+
+.crop {
+  width: 300px;
+  height: auto; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #FF775E; }
+
+.flex {
+  display: flex;
+  height: 100%;
+  flex-wrap: wrap; }
+
+.container .text-muted {
+  margin: 20px 0; }
+
+.my-spacer {
+  height: 50px; }
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px; }
+
+html {
+  position: relative;
+  min-height: 100%; }
+
+.height100vh {
+  height: 100vh; }
+
+/* Carousel base class */
+.carousel {
+  height: 500px;
+  width: 667px;
+  margin-top: 40px;
+  margin-bottom: 60px; }
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10; }
+
+.carousel-inner {
+  border-radius: 20px; }
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+  width: 667px;
+  border-radius: 20px; }
+
+.carousel-control {
+  border-radius: 20px; }
+
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 500px;
+  border-radius: 20px; }
+
+@media only screen and (max-width: 568px) {
   /* Carousel base class */
   .carousel {
     height: 241px;

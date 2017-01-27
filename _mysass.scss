@@ -1,3 +1,6 @@
+@import "mediaQueries.scss";
+@import "styling.scss";
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -6,9 +9,7 @@
   height: 60px;
   background-color: #FF775E;
 }
-#pfooter {
-  color: #403330;
-}
+
 .flex {
   display: flex;
   height: 100%;
@@ -33,10 +34,15 @@ html {
   min-height: 100%;
 }
 
+.height100vh {
+  height: 100vh;
+}
+
 /* Carousel base class */
 .carousel {
   height: 500px;
   width: 667px;
+  margin-top: 40px;
   margin-bottom: 60px;
 }
 /* Since positioning the image, we need to help out the caption */
@@ -44,17 +50,26 @@ html {
   z-index: 10;
 }
 
+.carousel-inner {
+  border-radius: 20px;
+}
+
 /* Declare heights because of positioning of img element */
 .carousel .item {
   height: 500px;
   width: 667px;
-  background-color: white;
+  border-radius: 20px;
+}
+
+.carousel-control{
+  border-radius: 20px;
 }
 .carousel-inner > .item > img {
   position: absolute;
   top: 0;
   left: 0;
   height: 500px;
+  border-radius: 20px;
 }
 
 @media only screen and (max-width: 568px){
@@ -89,41 +104,4 @@ html {
     font-size: 11px;
     line-height: 1;
   }
-}
-/* Todo media queries */
-@media only screen and (min-device-width: 320px)
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2){
-
-    /* Carousel base class */
-    .carousel {
-      height: 241px;
-      width: 320px;
-      margin-bottom: 60px;
-    }
-    /* Since positioning the image, we need to help out the caption */
-    .carousel-caption {
-      z-index: 10;
-    }
-
-    /* Declare heights because of positioning of img element */
-    .carousel .item {
-      height: 241px;
-      width: 320px;
-      background-color: white;
-    }
-    .carousel-inner > .item > img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: auto;
-    }
-  .carousel-caption  h1 {
-      font-size: 20px;
-    }
-    .carousel-caption p {
-      margin-bottom: 20px;
-      font-size: 11px;
-      line-height: 1;
-    }
 }
